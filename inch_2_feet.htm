@@ -1,0 +1,94 @@
+<html>
+<head><title> Inche To Feet</title>
+<style>
+#adjustment	{
+		position: fixed;
+		top: 0;
+		left: 550;
+  		background-image: url("height.jpg");
+		height:100%;
+		width:100%;
+		
+		}
+
+#design		{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height:100%;
+		width:100%;
+		background: #CE1616;
+		background: -moz-linear-gradient(45deg, #CE1616 0%, #1D10A4 47%, #C519AB 100%);
+		background: -webkit-linear-gradient(45deg, #CE1616 0%, #1D10A4 47%, #C519AB 100%);
+		background: linear-gradient(45deg, #CE1616 0%, #1D10A4 47%, #C519AB 100%);
+		}
+#text 		{
+			position: fixed;
+			top: 0;
+			left: 55;
+			
+			color:White;
+			text-decoration:none;	
+			font-family:tahoma;	
+			font-size: 60;
+		}
+#text2		{
+			position: fixed;
+			top: 300;
+			left: 900;
+			
+			color:White;
+			text-decoration:none;	
+			font-family:tahoma;	
+			font-size: 80;
+		}
+#box		{
+		color:White;
+		position: fixed;
+		width:25%;
+		height:550px;
+		border:2px solid gray;
+		background:"white";	
+		border-radius: 25px;
+		top:250;
+		left:25;
+		font-size:35;
+		font-family:tahoma;	
+	}
+
+</style>
+<script>
+function check()
+{
+	a=document.getElementById("btn").value;
+
+if(a=="")
+{
+	
+}
+else
+{
+	x=parseInt(a);
+	c=x/12
+	document.getElementById("res").innerHTML=c;
+	
+}
+}
+</script>
+<body>
+<div id="design"><div id="text"><b> INCH TO FEET <br>&nbsp;CONVERTER<hr></b></div><div id="adjustment"></div></div>
+
+<div id="box"> <br><br><br><br><b>&nbsp;&nbsp;&nbsp;Enter Inch </b>- <input type="text"  name="btn" id="btn"onkeyup="check()"><br><br><br>
+<br> </font></b></i>
+<font face="Tahoma" color="white"><b>
+&nbsp;&nbsp;&nbsp;Results - &nbsp;&nbsp;&nbsp;&nbsp;<span id="res"> </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*in Feets*)</font></b>
+</div>
+
+<div id="text2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TWELVE INCH GIVES &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 FEET ,THAT IS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HUGE!</b></div>
+
+
+
+</body>
+
+
+</html>

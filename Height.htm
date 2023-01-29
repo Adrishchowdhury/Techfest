@@ -1,0 +1,223 @@
+<html>
+
+ <head><title>  From Value to Feet or Inch Coverter</title>
+  
+  <style>
+  
+   table
+   
+   {
+    
+	background: cyan;
+	
+	font-size: 30px;
+	
+	color: indigo;
+	border: 25px ridge yellow;
+	border-radius: 35px;
+	
+   }
+   
+   th
+   
+   {
+     
+	 color: white;
+   }
+   
+   td
+   
+   {
+    
+	text-align: center;
+	
+   }
+   
+   #text_box_1
+   
+   {
+    
+	background: red;
+	
+	color: lime;
+	
+	font-size: 20px;
+	
+	font-family: Times New Roman;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+   }
+   
+   #text_box_2
+   
+   {
+    
+	background: red;
+	
+	color: lime;
+	
+	font-size: 20px;
+	
+	font-family: Times New Roman;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+   }
+  </style>
+  
+  <script>
+  
+   function calculation()
+   {
+   
+    var text1 = document.f1.text_1.value;
+	
+	var feet = document.f1.rad[0].checked;
+	
+	var inches = document.f1.rad[1].checked;
+	
+	//if - else ladder
+	
+	if (feet == true)
+	
+	{
+	 
+	 var result1 = text1 / 12;
+	 
+	 var result2 = result1.toFixed(2);
+	 
+	 document.f1.text_2.value = result2;
+	 
+	}
+	
+	else if (inches == true)
+	{
+	 
+	 var result3 = text1 * 12;
+	 
+	 var result4 = result3.toFixed(2);
+	 
+	 document.f1.text_2.value = result4;
+	 
+	}
+	
+	else
+	
+	{
+	
+	 alert("NO OPTION IS SELECTED, PLEASE SELECT ONE OPTION");
+	 
+	}
+	
+   }
+   
+  </script>
+  
+ </head>
+  
+  <body background ="math.jpg">
+  
+   <form name = "f1">
+   
+    <h1 style = "text-align: center; color: yellow;"> <font size="10" face="tahoma"><b>INCHES/FEET CONVERTER </h1></font></b>
+   
+    <table width = "600" height = "700" border = "0" align = "center">
+   
+     <tr>
+	 
+	  <th colspan = "4" bgcolor = "blue"> INCHES/FEET CONVERSION </th>
+	 
+	 </tr>
+	
+	 <tr>
+	 
+	  <td colspan = "4"> PLEASE ENTER A VALUE FOR CONVERSION </font> </td>
+	 
+	 </tr>
+   
+     <tr>
+    
+	  <th colspan = "4">
+	
+	   <input type = "text" name = "text_1" id = "text_box_1" value = "" size = "40">
+	 
+	  </th>
+	
+     </tr>
+	
+	 <tr>
+	 
+	  <td> &nbsp; </td>
+	 
+	  <td>
+	  
+	   <input type = "radio" name = "rad"> INCHES to FEET
+	   
+	  </td>
+	 
+	  <td> &nbsp; </td>
+	 
+	 </tr>
+	
+	 <tr>
+	 
+	  <td> &nbsp; </td>
+	 
+	  <td>
+	  
+	   <input type = "radio" name = "rad"> FEET to INCHES
+	   
+	  </td>
+	 
+	  <td> &nbsp; </td>
+	 
+	 </tr>
+	
+	 <tr>
+	  
+	  <td> <input type = "reset" value = "CLEAR VALUE" </td>
+	  
+	  <td> &nbsp; </td>
+	  
+	  <td> <input type = "button" name = "btn" value = "CALCULATE VALUE" onclick = "calculation()"> </td>
+	  
+	 </tr>
+	 
+     <tr>
+	
+	  <tr>
+	 
+	   <td colspan = "4"> FINAL RESULT VALUE AFTER CONVERSION </td>
+	 
+	  </tr>
+    
+	  <th colspan = "4">
+	
+	   <input type = "text" name = "text_2" id = "text_box_2" value = "">
+	 
+	  </th>
+	
+     </tr>
+	 
+	 <tr>
+	 
+      <td> &nbsp; </td>
+	  
+      <td> &nbsp; </td>
+	  
+      <td> &nbsp; </td>
+	  
+     </tr>
+	 
+    </table>
+	
+   </form>  
+   
+  </body>
+ 
+</html>

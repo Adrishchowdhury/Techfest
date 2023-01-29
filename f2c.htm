@@ -1,0 +1,95 @@
+<html>
+<head><title>Fahrenheit To Celsius</title>
+<style>
+#adjustment	{
+		position: fixed;
+		top: 0;
+		left: 550;
+  		background-image: url("tempbg.jpg");
+		height:100%;
+		width:100%;
+		
+		}
+
+#design		{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height:100%;
+		width:100%;
+		background: #13FF21;
+		background: -moz-linear-gradient(-45deg, #13FF21 0%, #28DDFF 19%, #C59237 100%);
+		background: -webkit-linear-gradient(-45deg, #13FF21 0%, #28DDFF 19%, #C59237 100%);
+		background: linear-gradient(135deg, #13FF21 0%, #28DDFF 19%, #C59237 100%);
+		}
+#text 		{
+			position: fixed;
+			top: 0;
+			left: 10;
+			
+			color:White;
+			text-decoration:none;	
+			font-family:tahoma;	
+			font-size: 41;
+		}
+#text2		{
+			position: fixed;
+			top: 250;
+			left: 600;
+			
+			color:white;
+			text-decoration:none;	
+			font-family:tahoma;	
+			font-size: 80;
+		}
+#box		{
+		color:White;
+		position: fixed;
+		width:25%;
+		height:550px;
+		border:2px solid gray;
+		background:"white";	
+		border-radius: 25px;
+		top:250;
+		left:25;
+		font-size:33;
+		font-family:tahoma;	
+	}
+
+</style>
+<script>
+function check()
+{
+	a=document.getElementById("btn").value;
+
+if(a=="")
+{
+	
+}
+else
+{
+	x=parseInt(a);
+	c=(x-32)*5/9
+	document.getElementById("res").innerHTML=c;
+	
+}
+}
+</script>
+<body>
+<div id="design"><div id="text"><b>FAHRENHEIT TO CELSIUS&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONVERTER<hr></b></div><div id="adjustment"></div></div>
+
+<div id="box"><br><br><br><br><b>Enter Fahenheit </b>- <input type="text"  name="btn" id="btn"onkeyup="check()"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i>(* In °F*)</b></i><br><br><br>
+<br> </font></b></i>
+<font face="Tahoma" color="white"><b>
+&nbsp;&nbsp;&nbsp;Results - &nbsp;&nbsp;&nbsp;&nbsp;<span id="res"> </span>°<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>(*In °C*)</i></font></b>
+</div>
+
+<div id="text2"><b>FORMULA TO CONVERT FAHRENHEIT TO CELSIUS<BR> IS<BR> (32°F − 32) × 5/9 = 0°C
+</b></div>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,221 @@
+<html>
+
+ <head><title> From Value to Fahrenheit or Celsius Coverter</title>
+  
+  <style>
+  
+table
+   
+   {
+    
+	background: cyan;
+	
+	font-size: 30px;
+	
+	color: indigo;
+	border:25px ridge yellow;
+	border-radius: 35px;
+	
+   }
+   
+   th
+   
+   {
+     
+	 color: white;
+   }
+   
+   td
+   
+   {
+    
+	text-align: center;
+	
+   }
+   
+   #text_box_1
+   
+   {
+    
+	background: red;
+	
+	color: lime;
+	
+	font-size: 20px;
+	
+	font-family: Times New Roman;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+   }
+   
+   #text_box_2
+   
+   {
+    
+	background: red;
+	
+	color: lime;
+	
+	font-size: 20px;
+	
+	font-family: Times New Roman;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+   }
+  </style>
+  
+  <script>
+  
+   function calculation()
+   {
+   
+    var text1 = document.f1.text_1.value;
+	
+	var celsius = document.f1.rad[0].checked;
+	
+	var fahrenheit = document.f1.rad[1].checked;
+	
+	//if - else ladder
+	
+	if (celsius == true)
+	
+	{
+	 
+	 var result1 = (5 / 9) * (text1 - 32);
+	 
+	 var result2 = result1.toFixed(2);
+	 
+	 document.f1.text_2.value = result2;
+	 
+	}
+	
+	else if (fahrenheit == true)
+	{
+	 
+	 var result3 = ((9 / 5) * text1) + 32;
+	 
+	 var result4 = result3.toFixed(2);
+	 
+	 document.f1.text_2.value = result4;
+	 
+	}
+	
+	else
+	
+	{
+	
+	 alert("NO OPTION IS SELECTED, PLEASE SELECT ONE OPTION");
+	}
+	
+   }
+  </script>
+  
+ </head>
+  
+  <body background="tempbg.jpg">
+  
+   <form name = "f1">
+   
+    <h1 style = "text-align: center; color: white;"> <font size="10" face="tahoma"><b>TEMPERATURE CONVERSION CELSIUS/FAHRENHEIT  </h1></b></font>
+   
+    <table width = "600" height = "700" border = "0" align = "center">
+   
+     <tr>
+	 
+	  <th colspan = "4" bgcolor = "blue"> TEMPERATURE CONVERSION </th>
+	 
+	 </tr>
+	
+	 <tr>
+	 
+	  <td colspan = "4"> PLEASE ENTER A VALUE FOR CONVERSION </font> </td>
+	 
+	 </tr>
+   
+     <tr>
+    
+	  <th colspan = "4">
+	
+	   <input type = "text" name = "text_1" id = "text_box_1" value = "" size = "40">
+	 
+	  </th>
+	
+     </tr>
+	
+	 <tr>
+	 
+	  <td> &nbsp; </td>
+	 
+	  <td>
+	  
+	   <input type = "radio" name = "rad">FAHRENHEIT to CELSIUS
+	   
+	  </td>
+	 
+	  <td> &nbsp; </td>
+	 
+	 </tr>
+	
+	 <tr>
+	 
+	  <td> &nbsp; </td>
+	 
+	  <td>
+	  
+	   <input type = "radio" name = "rad">CELSIUS to FAHRENHEIT
+	   
+	  </td>
+	 
+	  <td> &nbsp; </td>
+	 
+	 </tr>
+	
+	 <tr>
+	  
+	  <td> <input type = "reset" value = "CLEAR VALUE" </td>
+	  
+	  <td> &nbsp; </td>
+	  
+	  <td> <input type = "button" name = "btn" value = "CALCULATE VALUE" onclick = "calculation()"> </td>
+	  
+	 </tr>
+	 
+     <tr>
+	
+	  <tr>
+	 
+	   <td colspan = "4"> FINAL RESULT VALUE FOR CONVERSION </td>
+	 
+	  </tr>
+    
+	  <th colspan = "4">
+	
+	   <input type = "text" name = "text_2" id = "text_box_2" value = "" size = "40">
+	 
+	  </th>
+	
+     </tr>
+	 
+	 <tr>
+	 
+      <td> &nbsp; </td>
+	  
+      <td> &nbsp; </td>
+	  
+      <td> &nbsp; </td>
+	  
+     </tr>
+	 
+    </table>
+	
+   </form>  
+   
+  </body>
+ 
+</html>

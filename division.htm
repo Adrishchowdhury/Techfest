@@ -1,0 +1,92 @@
+<html>
+<head><title>Division</title>
+<style>
+#adjustment	{
+		position: fixed;
+		top: 0;
+		left: 550;
+  		background-image: url("math.jpg");
+		height:100%;
+		width:100%;
+		
+		}
+
+#design		{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height:100%;
+		width:100%;
+		background: #13FF21;
+		background: -moz-linear-gradient(-45deg, #13FF21 0%, #28DDFF 19%, #C59237 100%);
+		background: -webkit-linear-gradient(-45deg, #13FF21 0%, #28DDFF 19%, #C59237 100%);
+		background: linear-gradient(135deg, #13FF21 0%, #28DDFF 19%, #C59237 100%);
+		}
+#text 		{
+			position: fixed;
+			top: 0;
+			left: 10;
+			
+			color:White;
+			text-decoration:none;	
+			font-family:tahoma;	
+			font-size: 67;
+		}
+#text2		{
+			position: fixed;
+			top: 250;
+			left: 600;
+			
+			color:white;
+			text-decoration:none;	
+			font-family:tahoma;	
+			font-size: 80;
+		}
+#box		{
+		color:White;
+		position: fixed;
+		width:25%;
+		height:550px;
+		border:2px solid gray;
+		background:"white";	
+		border-radius: 25px;
+		top:250;
+		left:25;
+		font-size:33;
+		font-family:tahoma;	
+	}
+
+
+
+</style>
+<script>
+function check()
+{
+	a=document.getElementById("num1").value;
+	b=document.getElementById("num2").value;
+
+if(a=="" || b=="")
+{
+	alert("Please enter number");
+}
+else
+{
+	x=parseInt(a);
+	y=parseInt(b);
+	c=x/y;
+	document.getElementById("res").innerHTML=c;
+}
+}
+</script>
+<body>
+<div id="design"><div id="text"><b>&nbsp;&nbsp;&nbsp;&nbsp;DIVISION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr></b></div><div id="adjustment"></div></div>
+<div id="box"><b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Enter Values To Divide</u></b><br><br><br><b>
+Enter First Number <input type="text" name="num1" id="num1"><br>
+Enter Second Number <input type="text" name="num2" id="num2"><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="btn" value="Divide" onclick="check()">
+<br> <br>
+
+The result is: <span id="res"> </span>
+</body>
+</html>

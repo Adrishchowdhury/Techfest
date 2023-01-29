@@ -1,0 +1,76 @@
+<html>
+<head><title>Sign Up</title>
+<style>
+#container{
+	position: fixed;
+	width:25%;
+	height:550px;
+	border:2px solid gray;
+	background:"white";	
+	border-radius: 25px;
+	top:200;
+	left:700;
+	}
+
+</style>
+</head>
+
+<script>
+
+function check()
+{
+	a= document.f1.user.value;
+	b= document.f1.pass.value;
+	c= document.f1.num.value;
+	d=document.f1.email.value;
+                  e= document.f1.gen1[0]. checked;
+ 	f= document.f1.gen1[1]. checked;
+	
+	if(a=="")
+	{
+		alert(" Enter Your Username");
+	}
+else if(b=="")
+	{
+		alert("Enter Your Password");
+	}
+else if(c=="")
+	{
+		alert("Enter Your Phone Number");
+	}
+else if(d=="")
+	{
+		alert("Enter Your Email");
+	}
+else if( e==false && f==false)
+	{	
+		alert("Please Select A Gender");
+	}
+else
+	{
+		alert("Registered Sucessfully");
+	}
+}
+</script>
+<body background="loginbg.jpg">
+<font size="5" face="Tahoma" color="white"><center>
+<form name="f1"><div id="container"><br><br><i><u><b>Sign Up</b></u></i><br><br><br>
+<i><b>USERNAME</b></i> &nbsp;&nbsp;&nbsp;<input type= "text" name="user"><br><br>
+<i><b>PASSWORD</b> </i>&nbsp;&nbsp;&nbsp;<Input type="password" name="pass"><br><br>
+<i><b>CONTACT NO</b></i>&nbsp;&nbsp;&nbsp;<Input type="number" name="num"><br><br>
+<i><b>EMAIL ADDRESS&nbsp; </b></i><Input type="text" name="email"><br><br>
+<i><b>GENDER-</b></i><input type="radio" name="gen1">
+Male
+<input type="radio" name="gen1">
+Female<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="button" name="button" value="Register" onclick="check()"
+</form>
+</font>
+
+</center>
+</div>
+</body>
+</html>

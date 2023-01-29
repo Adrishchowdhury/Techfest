@@ -1,0 +1,223 @@
+<html>
+
+ <head>
+  
+  <style>
+  
+   table
+   
+   {
+    
+	background: cyan;
+	
+	font-size: 30px;
+	
+	color: indigo;
+	border: 25px ridge yellow;
+	border-radius: 35px;
+	
+   }
+   
+   th
+   
+   {
+     
+	 color: white;
+   }
+   
+   td
+   
+   {
+    
+	text-align: center;
+	
+   }
+   
+   #text_box_1
+   
+   {
+    
+	background: red;
+	
+	color: lime;
+	
+	font-size: 20px;
+	
+	font-family: Times New Roman;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+   }
+   
+   #text_box_2
+   
+   {
+    
+	background: red;
+	
+	color: lime;
+	
+	font-size: 20px;
+	
+	font-family: Times New Roman;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+   }
+  </style>
+  
+  <script>
+  
+   function calculation()
+   {
+   
+    var text1 = document.f1.text_1.value;
+	
+	var indian_rupees = document.f1.rad[0].checked;
+	
+	var united_states_dollars = document.f1.rad[1].checked;
+	
+	//if - else ladder
+	
+	if (indian_rupees == true)
+	
+	{
+	 
+	 var result1 = text1 * 78.10;
+	 
+	 var result2 = result1.toFixed(2);
+	 
+	 document.f1.text_2.value = result2;
+	 
+	}
+	
+	else if (united_states_dollars == true)
+	{
+	 
+	 var result3 = text1 / 78.10;
+	 
+	 var result4 = result3.toFixed(2);
+	 
+	 document.f1.text_2.value = result4;
+	 
+	}
+	
+	else
+	
+	{
+	
+	 alert("NO OPTION IS SELECTED, PLEASE SELECT ONE OPTION");
+	 
+	}
+	
+   }
+   
+  </script>
+  
+ </head>
+  
+  <body background="currency.jpg">
+  
+   <form name = "f1">
+   
+    <h1 style = "text-align: center; black: white;"> <font size="15" face="tahoma"><b>CURRENCY CONVERSION CALCULATOR </h1></font><b>
+   
+    <table width = "600" height = "700" border = "0" align = "center">
+   
+     <tr>
+	 
+	  <th colspan = "4" bgcolor = "blue"> CURRENCY CONVERSION </th>
+	 
+	 </tr>
+	
+	 <tr>
+	 
+	  <td colspan = "4"> PLEASE ENTER A VALUE FOR CONVERSION </font> </td>
+	 
+	 </tr>
+   
+     <tr>
+    
+	  <th colspan = "4">
+	
+	   <input type = "text" name = "text_1" id = "text_box_1" value = "" size = "40">
+	 
+	  </th>
+	
+     </tr>
+	
+	 <tr>
+	 
+	  <td> &nbsp; </td>
+	 
+	  <td>
+	  
+	   <input type = "radio" name = "rad"> USD to INR
+	   
+	  </td>
+	 
+	  <td> &nbsp; </td>
+	 
+	 </tr>
+	
+	 <tr>
+	 
+	  <td> &nbsp; </td>
+	 
+	  <td>
+	  
+	   <input type = "radio" name = "rad"> INR to USD
+	   
+	  </td>
+	 
+	  <td> &nbsp; </td>
+	 
+	 </tr>
+	
+	 <tr>
+	  
+	  <td> <input type = "reset" value = "CLEAR VALUE" </td>
+	  
+	  <td> &nbsp; </td>
+	  
+	  <td> <input type = "button" name = "btn" value = "CALCULATE VALUE" onclick = "calculation()"> </td>
+	  
+	 </tr>
+	 
+     <tr>
+	
+	  <tr>
+	 
+	   <td colspan = "4"> FINAL RESULT VALUE AFTER CONVERSION </td>
+	 
+	  </tr>
+    
+	  <th colspan = "4">
+	
+	   <input type = "text" name = "text_2" id = "text_box_2" value = "" size = "40">
+	 
+	  </th>
+	
+     </tr>
+	 
+	 <tr>
+	 
+      <td> &nbsp; </td>
+	  
+      <td> &nbsp; </td>
+	  
+      <td> &nbsp; </td>
+	  
+     </tr>
+	 
+    </table>
+	
+   </form>  
+   
+  </body>
+ 
+</html>
